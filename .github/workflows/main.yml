@@ -1,1 +1,9 @@
+name: build-docker-container
+run-name: ${{ github.actor}}-build-docker-container-${{ github.run_number }}
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - run: docker compose build
 
